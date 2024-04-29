@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { FaPlus, FaTrash } from "react-icons/fa";
 
 const TodoList = () => {
-  const initialData = JSON.parse(localStorage.getItem("todos"));
+  const initialData = JSON.parse(localStorage.getItem("todos")) ?? [];
   const [todoList, setTodoList] = useState([...initialData]);
   const [text, setText] = useState("");
 
